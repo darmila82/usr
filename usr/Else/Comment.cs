@@ -13,6 +13,7 @@ namespace usr.Else
     {
         static public string[] comments_list = {};
 
+        // xd
         static public void comments_create(string comment)
         {
             for (int i = 0;i < comments_list.Length+1; i++)
