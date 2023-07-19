@@ -47,6 +47,16 @@
             this.register = new System.Windows.Forms.RadioButton();
             this.exit = new System.Windows.Forms.RadioButton();
             this.Stats = new System.Windows.Forms.TextBox();
+            this.comment_create = new System.Windows.Forms.Button();
+            this.articles_create = new System.Windows.Forms.Button();
+            this.ban_users_create = new System.Windows.Forms.Button();
+            this.create = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -163,6 +173,7 @@
             this.register_button.TabIndex = 11;
             this.register_button.Text = "Зареєструватися";
             this.register_button.UseVisualStyleBackColor = true;
+            this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 
             // errors
             // 
@@ -237,11 +248,117 @@
             this.Stats.TabIndex = 19;
             this.Stats.Visible = false;
             // 
+            // comment_create
+            // 
+            this.comment_create.Location = new System.Drawing.Point(674, 572);
+            this.comment_create.Name = "comment_create";
+            this.comment_create.Size = new System.Drawing.Size(240, 71);
+            this.comment_create.TabIndex = 20;
+            this.comment_create.Text = "Створити коментар";
+            this.comment_create.UseVisualStyleBackColor = true;
+            this.comment_create.Click += new System.EventHandler(this.comment_create_Click);
+            // 
+            // articles_create
+            // 
+            this.articles_create.Location = new System.Drawing.Point(545, 495);
+            this.articles_create.Name = "articles_create";
+            this.articles_create.Size = new System.Drawing.Size(240, 71);
+            this.articles_create.TabIndex = 21;
+            this.articles_create.Text = "Додати пеервірену статтю";
+            this.articles_create.UseVisualStyleBackColor = true;
+            this.articles_create.Click += new System.EventHandler(this.articles_create_Click);
+            // 
+            // ban_users_create
+            // 
+            this.ban_users_create.Location = new System.Drawing.Point(811, 495);
+            this.ban_users_create.Name = "ban_users_create";
+            this.ban_users_create.Size = new System.Drawing.Size(240, 71);
+            this.ban_users_create.TabIndex = 22;
+            this.ban_users_create.Text = "Забанити користувача";
+            this.ban_users_create.UseVisualStyleBackColor = true;
+            this.ban_users_create.Click += new System.EventHandler(this.ban_users_create_Click);
+            // 
+            // create
+            // 
+            this.create.Location = new System.Drawing.Point(780, 142);
+            this.create.Multiline = true;
+            this.create.Name = "create";
+            this.create.Size = new System.Drawing.Size(380, 20);
+            this.create.TabIndex = 23;
+            this.create.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(512, 204);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 20);
+            this.textBox1.TabIndex = 29;
+            this.textBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(408, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Дата народження";
+            this.label1.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(506, 256);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(134, 20);
+            this.textBox2.TabIndex = 27;
+            this.textBox2.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(446, 230);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(134, 20);
+            this.textBox3.TabIndex = 26;
+            this.textBox3.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(408, 259);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Номер телефону";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(408, 237);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Email";
+            this.label3.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1431, 697);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.create);
+            this.Controls.Add(this.ban_users_create);
+            this.Controls.Add(this.articles_create);
+            this.Controls.Add(this.comment_create);
             this.Controls.Add(this.Stats);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -288,6 +405,16 @@
         private System.Windows.Forms.RadioButton register;
         private System.Windows.Forms.RadioButton exit;
         private System.Windows.Forms.TextBox Stats;
+        private System.Windows.Forms.Button comment_create;
+        private System.Windows.Forms.Button articles_create;
+        private System.Windows.Forms.Button ban_users_create;
+        private System.Windows.Forms.TextBox create;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
