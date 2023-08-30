@@ -8,7 +8,15 @@ namespace usr.Users
 {
     internal class Admin : User
     {
-        public string[] banned_users = { };
-        public string[] articles_created = { };
+        List <string> banned_users = { };
+        List<string> articles_created = { };
+
+        public void ban_users()
+        {
+            
+            int a = Convert.ToString(Console.ReadLine());
+            banned_users.Add(a);
+
+        }
     }
 }
