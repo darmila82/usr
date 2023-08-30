@@ -9,13 +9,14 @@ namespace usr.Users
     internal class Admin : User
     {
         List <string> banned_users = { };
-        public string[] articles_created = { };
+        List<string> articles_created = { };
 
         public void ban_users()
         {
             
             int a = Convert.ToString(Console.ReadLine());
             banned_users.Add(a);
+
         }
     }
 }
